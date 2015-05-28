@@ -1,0 +1,23 @@
+
+# GOOGLE SAMPLE PACKAGING DATA
+#
+# This file is used by Google as part of our samples packaging process.
+# End users may safely ignore this file. It has no relevance to other systems.
+---
+status:       DRAFT
+technologies: [Android]
+categories:   [security]
+languages:    [Java]
+solutions:    [Mobile]
+github:       android-Fingerprint Dialog Sample
+level:        INTERMEDIATE
+icon:         screenshots/big-icon.png
+apiRefs:
+    - android:android.hardware.fingerprint.FingerprintManager
+    - android:android.hardware.fingerprint.FingerprintManager.AuthenticationCallback
+    - android:android.hardware.fingerprint.FingerprintManager.CryptoObject
+    - android:android.security.KeyGenParameterSpec
+    - android:java.security.KeyStore
+    - android:javax.crypto.Cipher
+    - android:javax.crypto.KeyGenerator
+license: apache2
