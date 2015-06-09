@@ -69,7 +69,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((InjectedApplication) getApplication()).inject(this);
+        ((InjectedApplication) getApplication()).getObjectGraph().inject(this);
 
         requestPermissions(new String[]{Manifest.permission.USE_FINGERPRINT}, 0);
     }

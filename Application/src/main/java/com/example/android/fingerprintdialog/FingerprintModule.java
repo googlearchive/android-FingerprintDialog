@@ -36,10 +36,7 @@ import dagger.Provides;
 /**
  * Dagger module for Fingerprint APIs.
  */
-@Module(
-        library = true,
-        injects = {MainActivity.class}
-)
+@Module
 public class FingerprintModule {
 
     private final Context mContext;
