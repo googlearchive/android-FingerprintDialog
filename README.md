@@ -35,7 +35,7 @@ Once the fingerprint (or password) is verified, the
 Pre-requisites
 --------------
 
-- Android SDK vandroid-MNC
+- Android SDK MNC
 - Android Build Tools v22.0.1
 - Android Support Repository
 
