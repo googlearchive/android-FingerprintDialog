@@ -42,7 +42,7 @@ Pre-requisites
 Screenshots
 -------------
 
-<img src="screenshots/1-purchase-screen.png" height="400" alt="Screenshot"/> <img src="screenshots/2-fingerprint-dialog.png" height="400" alt="Screenshot"/> <img src="screenshots/3-fingerprint-authenticated.png" height="400" alt="Screenshot"/> 
+<img src="screenshots/1-purchase-screen.png" height="400" alt="Screenshot"/> <img src="screenshots/2-fingerprint-dialog.png" height="400" alt="Screenshot"/> <img src="screenshots/3-fingerprint-authenticated.png" height="400" alt="Screenshot"/> <img src="screenshots/4-new-fingerprint-enrolled.png" height="400" alt="Screenshot"/> 
 
 Getting Started
 ---------------
