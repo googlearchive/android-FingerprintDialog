@@ -9,7 +9,7 @@ technologies: [Android]
 categories:   [security]
 languages:    [Java]
 solutions:    [Mobile]
-github:       android-Fingerprint Dialog Sample
+github:       android-FingerprintDialog
 level:        INTERMEDIATE
 icon:         screenshots/big-icon.png
 apiRefs:
