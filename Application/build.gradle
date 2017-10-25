@@ -35,13 +35,13 @@ List<String> dirs = [
 
 android {
     
-        compileSdkVersion 24
+        compileSdkVersion 26
 
     buildToolsVersion "26.0.1"
 
     defaultConfig {
         minSdkVersion 23
-        targetSdkVersion 24
+        targetSdkVersion 26
     }
 
     compileOptions {
