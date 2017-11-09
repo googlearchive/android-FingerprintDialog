@@ -16,7 +16,6 @@
 
 package com.example.android.fingerprintdialog;
 
-import android.app.Activity;
 import android.app.KeyguardManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -28,6 +27,8 @@ import android.security.keystore.KeyGenParameterSpec;
 import android.security.keystore.KeyPermanentlyInvalidatedException;
 import android.security.keystore.KeyProperties;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Base64;
 import android.util.Log;
 import android.view.Menu;
@@ -57,7 +58,7 @@ import javax.crypto.SecretKey;
 /**
  * Main entry point for the sample, showing a backpack and "Purchase" button.
  */
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -74,6 +75,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         try {
             mKeyStore = KeyStore.getInstance("AndroidKeyStore");
@@ -102,9 +105,8 @@ public class MainActivity extends Activity {
 
         KeyguardManager keyguardManager = getSystemService(KeyguardManager.class);
         FingerprintManager fingerprintManager = getSystemService(FingerprintManager.class);
-        Button purchaseButton = (Button) findViewById(R.id.purchase_button);
-        Button purchaseButtonNotInvalidated = (Button) findViewById(
-                R.id.purchase_button_not_invalidated);
+        Button purchaseButton = findViewById(R.id.purchase_button);
+        Button purchaseButtonNotInvalidated = findViewById(R.id.purchase_button_not_invalidated);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             purchaseButtonNotInvalidated.setEnabled(true);
@@ -115,8 +117,7 @@ public class MainActivity extends Activity {
             // Hide the purchase button which uses a non-invalidated key
             // if the app doesn't work on Android N preview
             purchaseButtonNotInvalidated.setVisibility(View.GONE);
-            findViewById(R.id.purchase_button_not_invalidated_description)
-                    .setVisibility(View.GONE);
+            findViewById(R.id.purchase_button_not_invalidated_description).setVisibility(View.GONE);
         }
 
         if (!keyguardManager.isKeyguardSecure()) {
@@ -138,7 +139,8 @@ public class MainActivity extends Activity {
             purchaseButton.setEnabled(false);
             // This happens when no fingerprints are registered.
             Toast.makeText(this,
-                    "Go to 'Settings -> Security -> Fingerprint' and register at least one fingerprint",
+                    "Go to 'Settings -> Security -> Fingerprint' and register at least one" +
+                            " fingerprint",
                     Toast.LENGTH_LONG).show();
             return;
         }
@@ -195,7 +197,7 @@ public class MainActivity extends Activity {
     private void showConfirmation(byte[] encrypted) {
         findViewById(R.id.confirmation_message).setVisibility(View.VISIBLE);
         if (encrypted != null) {
-            TextView v = (TextView) findViewById(R.id.encrypted_message);
+            TextView v = findViewById(R.id.encrypted_message);
             v.setVisibility(View.VISIBLE);
             v.setText(Base64.encodeToString(encrypted, 0 /* flags */));
         }
