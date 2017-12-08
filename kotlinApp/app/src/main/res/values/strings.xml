@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2017 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License
+  -->
+<resources>
+    <!--
+      The similar strings app_name is added in the Application/template directory, but depending
+      on the template directory makes it hard for the sample buildable with Android.mk.
+      Thus defining the application_name with different name from the template.
+    -->
+    <string name="application_name">FingerprintDialog</string>
+    <string name="action_settings">Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="use_password">Use password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="ok">OK</string>
+    <string name="password">Password</string>
+    <string name="fingerprint_description">Confirm fingerprint to continue</string>
+    <string name="fingerprint_hint">Touch sensor</string>
+    <string name="password_description">Enter your store password to continue</string>
+    <string name="purchase">Purchase</string>
+    <string name="purchase_not_invalidated">Purchase not invalidated</string>
+    <string name="purchase_button_not_invalidated_description">
+        You can proceed to purchase with this button \n even if a new fingerprint is enrolled
+    </string>
+    <string name="fingerprint_not_recognized">Fingerprint not recognized. Try again</string>
+    <string name="fingerprint_success">Fingerprint recognized</string>
+    <string name="item_title">White Mesh Pluto Backpack</string>
+    <string name="item_price">$62.68</string>
+    <string name="item_description">Mesh backpack in white. Black textile trim throughout.</string>
+    <string name="purchase_done">Purchase successful</string>
+    <string name="new_fingerprint_enrolled_description">
+        A new fingerprint was added to this device, so your password is required.
+    </string>
+    <string name="use_fingerprint_in_future">Use fingerprint in the future</string>
+    <string name="use_fingerprint_to_authenticate_title">Use fingerprint to authenticate</string>
+    <string name="use_fingerprint_to_authenticate_key" >use_fingerprint_to_authenticate_key</string>
+    <string name="description_bugdroid_icon">Android bugdroid image</string>
+    <string name="description_fingerprint_icon">Fingerprint icon</string>
+    <string name="register_fingerprint">
+        Go to \'Settings -> Security -> Fingerprint\' and register at least one fingerprint
+    </string>
+    <string name="setup_lock_screen">
+        Secure lock screen hasn\'t set been up.\n
+        Go to \'Settings -> Security -> Fingerprint\' to set up a fingerprint
+    </string>
+</resources>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2017 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License
+  -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="@dimen/default_elevation"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        <ImageView
+            android:layout_width="@dimen/logo_square_dimen"
+            android:layout_height="@dimen/logo_square_dimen"
+            android:layout_marginTop="@dimen/logo_square_margin"
+            android:layout_marginBottom="@dimen/logo_square_margin"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:src="@drawable/android_robot"
+            android:contentDescription="@string/description_bugdroid_icon"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_small"
+            android:layout_marginStart="@dimen/default_margin_small"
+            android:layout_marginEnd="@dimen/default_margin_small"
+            android:orientation="vertical"
+            android:background="@drawable/card"
+            android:elevation="@dimen/default_elevation"
+            android:paddingTop="@dimen/default_padding"
+            android:paddingBottom="@dimen/default_padding"
+            android:paddingStart="@dimen/default_padding"
+            android:paddingEnd="@dimen/default_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.Material.Headline"
+                android:text="@string/item_title"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.Material.Body2"
+                android:textColor="?android:attr/colorAccent"
+                android:text="@string/item_price"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                android:textColor="?android:attr/textColorSecondary"
+                android:text="@string/item_description"/>
+
+        </LinearLayout>
+
+        <Button style="@android:style/Widget.Material.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_small"
+            android:layout_marginEnd="@dimen/default_margin_end"
+            android:layout_gravity="end"
+            android:textColor="?android:attr/textColorPrimaryInverse"
+            android:text="@string/purchase"
+            android:id="@+id/purchase_button" />
+
+        <Button style="@android:style/Widget.Material.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_small"
+            android:layout_marginEnd="@dimen/default_margin_end"
+            android:layout_gravity="end"
+            android:textColor="?android:attr/textColorPrimaryInverse"
+            android:text="@string/purchase_not_invalidated"
+            android:id="@+id/purchase_button_not_invalidated" />
+
+        <TextView
+            android:id="@+id/purchase_button_not_invalidated_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin_end"
+            android:gravity="end"
+            android:textAlignment="gravity"
+            android:text="@string/purchase_button_not_invalidated_description"/>
+
+        <TextView
+            android:id="@+id/confirmation_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:paddingStart="@dimen/default_padding"
+            android:paddingEnd="@dimen/default_padding"
+            android:textAppearance="@android:style/TextAppearance.Material.Body2"
+            android:textColor="?android:attr/colorAccent"
+            android:text="@string/purchase_done"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/encrypted_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:paddingStart="@dimen/default_padding"
+            android:paddingEnd="@dimen/default_padding"
+            android:textAppearance="@android:style/TextAppearance.Material.Body2"
+            android:textColor="?android:attr/colorAccent"
+            android:text="@string/purchase_done"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</ScrollView>
